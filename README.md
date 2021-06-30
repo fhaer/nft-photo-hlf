@@ -1,6 +1,6 @@
 ## Hyperledger Fabric Photo NFT platform
 
-Prototype for demonstrating the feasibility of implementing an NFT platform for photographers on the Hyperledger Fabric blockchain based on an architecture model from ArchiMate.
+Prototype for demonstrating the feasibility of implementing an NFT platform for photographers on the Hyperledger Fabric blockchain with an ArchiMate architecture model.
 
 Platform functions:
 - Creation of ownership NFTs by a photographer
