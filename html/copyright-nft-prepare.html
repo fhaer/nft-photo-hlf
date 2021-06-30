@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hyperledger Fabric Licensee NFT Platform</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS Source: w3.CSS, free use / no license, https://www.w3schools.com/w3css -->
+        <link rel="stylesheet" href="/w3.css">
+        <style>
+            .main-container {
+              margin-bottom: 40px;
+            }
+            .main-headline {
+              margin-bottom: 20px;
+            }
+        </style>
+    </head>
+<body>
+
+    <div class="w3-container main-container">
+        <h2 id="page-title">Hyperledger Fabric Photographer NFT Platform</h2>
+    </div>
+
+    <div class="w3-container main-container">
+        <h3 id="section-title" class="main-headline">Copyright NFT</h3>
+        
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+            <h3 id="box-title">Create Ownership Token</h3>
+            </div>
+
+            <form class="w3-container" action="/photo/nft/create">
+            <p id="output">
+               Review the hash value and specify the URI. 
+            </p>
+            <p>
+            <input class="w3-input" type="text" value="0x" id="ot-token-id" name="otTokenID">
+            <label>SHA-256</label></p>
+            <p>
+            <input class="w3-input" type="text" value="https://example.com/photo" name="otURI">
+            <label>URI</label></p>
+            <p>
+            <button class="w3-btn w3-blue-grey w3-round" onclick="window.history.back()">Back</button>  
+            <button class="w3-btn w3-blue-grey w3-round" type="submit">Create NFT</button>  
+            <p>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <script>
+        let uri = document.baseURI;
+        let params = new URL(uri).searchParams;
+        params.forEach((val, p) => {
+           if (p == "ot-token-id") {
+              let field = document.getElementById(p);
+              field.value = val;
+           }
+        });
+     </script>
+
+</body>
+</html>
+

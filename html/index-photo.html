@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hyperledger Fabric Photographer NFT Platform</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS Source: w3.CSS, free use / no license, https://www.w3schools.com/w3css -->
+        <link rel="stylesheet" href="/w3.css">
+        <style>
+            .main-container {
+              margin-bottom: 40px;
+            }
+            .main-headline {
+              margin-bottom: 20px;
+            }
+        </style>
+    </head>
+<body>
+
+    <div class="w3-container main-container">
+        <h2>Hyperledger Fabric Photo NFT Platform - Copyright Owner</h2>
+    </div>
+
+    <div class="w3-container main-container">
+        <h3 class="main-headline">Identity Management</h3>
+        
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+            <h3>Create Account</h3>
+            </div>
+
+            <form class="w3-container" action="/photo/identity/create">
+            <p>
+            Registration and enrollment of new peers with the Fabric CA. 
+            <p>
+            <input class="w3-input w3-round" type="number" value="1" name="peerID" style="background-color: lightgray;" readonly>
+            <label>Peer ID</label></p>
+            <p>
+            <button class="w3-btn w3-blue-grey w3-round" type="submit">Register and Enroll</button>
+            <p>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <div class="w3-container main-container">
+        <h3 class="main-headline">Copyright NFT</h3>
+        
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+                <h3>Create Ownership Token</h3>
+            </div>
+            <form class="w3-container" action="/photo/nft/upload" method="post" enctype="multipart/form-data">
+                <p>
+                Create an NFT from a photo with a unique token ID generated from the photo file. The token ID is computed using SHA-256.
+                <p>
+                <input class="w3-input" id="ot-file" type="file" name="upload">
+                <label>Photo File</label></p>
+                <p>
+                <button class="w3-btn w3-blue-grey w3-round" type="submit">Create NFT</button>
+                <p>
+            </form>
+        </div>
+
+    </div>
+<!--
+    <div class="w3-container main-container">
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+                <h3>View Token Balance</h3>
+            </div>
+            <form class="w3-container" action="/photo/nft/balance">
+                <p>
+                Show the token balance owned by this peer.
+                <p>
+                <input class="w3-input w3-round" type="number" value="1" name="peerID" style="background-color: lightgray;" readonly>
+                <label>Peer ID</label></p>
+                <p>
+                <button class="w3-btn w3-blue-grey w3-round" type="submit">View Balance</button>
+                <p>
+            </form>
+        </div>
+    </div>
+-->
+    <div class="w3-container main-container">
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+                <h3>View Owner</h3>
+            </div>
+            <form class="w3-container" action="/photo/nft/owner">
+                <p>
+                Show the owner of a token.
+                <p>
+                <input class="w3-input" type="text" value="1" name="peerID">
+                <label>Peer ID</label></p>
+                <p>
+                <input class="w3-input" type="text" value="" name="tokenID">
+                <label>Token ID</label></p>
+                <p>
+                <button class="w3-btn w3-blue-grey w3-round" type="submit">View Owner</button>
+                <p>
+            </form>
+        </div>
+    </div>
+<!--
+    <div class="w3-container main-container">
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+                <h3>Transfer NFT</h3>
+            </div>
+            <form class="w3-container" action="/photo/nft/transfer">
+                <p>
+                Transfer of copyright token to another party.
+                <p>
+                <input class="w3-input" type="text" value="1" name="peerIDS">
+                <label>Owner Peer ID</label></p>
+                <input class="w3-input" type="text" value="2" name="peerIDR">
+                <label>NFT Recipient Peer ID</label></p>
+                <p>
+                <input class="w3-input" type="text" value="" name="tokenID">
+                <label>Token ID</label></p>
+                <p>
+                <button class="w3-btn w3-blue-grey w3-round" type="submit">Transfer</button>
+                <p>
+            </form>
+        </div>
+    </div>
+-->
+
+    <div class="w3-container main-container">
+        <h3 class="main-headline">License Token</h3>
+        
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+                <h3>Create Licenses</h3>
+            </div>
+            <form class="w3-container" action="/license/token/create">
+                <p>
+                Issuance of license tokens for copyright NFTs owned by this peer.
+                <p>
+                <input class="w3-input" type="text" value="" name="tokenID">
+                <label>Copyright NFT ID</label>
+                <p>
+                <input class="w3-input" type="text" value="" name="quantity">
+                <label>Number of Licenses</label>
+                <p>
+                <button class="w3-btn w3-blue-grey w3-round" type="submit">Create License Token</button>
+                <p>
+            </form>
+        </div>
+    </div>
+    <div class="w3-container main-container">
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+                <h3>View Token Balance</h3>
+            </div>
+            <form class="w3-container" action="/license/token/balance">
+                <p>
+                Show the token balance owned by this peer.
+                <p>
+                <input class="w3-input" type="number" value="1" name="peerID">
+                <label>Peer ID</label>
+                <p>
+                <button class="w3-btn w3-blue-grey w3-round" type="submit">View Number of Licenses</button>
+                <p>
+            </form>
+        </div>
+    </div>
+    <div class="w3-container main-container">
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+                <h3>Transfer License Token</h3>
+            </div>
+            <form class="w3-container" action="/license/token/transfer">
+                <p>
+                Transfer of license tokens to licensee.
+                <p>
+                <input class="w3-input" type="text" value="1" name="peerIDS">
+                <label>Owner Peer ID</label></p>
+                <input class="w3-input" type="text" value="2" name="peerIDR">
+                <label>Licensee Peer ID</label></p>
+                <p>
+                <input class="w3-input" type="number" value="1" name="quantity">
+                <label>Number of Licenses</label></p>
+                <p>
+                <button class="w3-btn w3-blue-grey w3-round" type="submit">Transfer</button>
+                <p>
+            </form>
+        </div>
+    </div>
+
+
+   <script>
+      let uri = document.baseURI;
+      let params = new URL(uri).searchParams;
+      params.forEach((val, p) => {
+         if (p == "ot-token-id") {
+            let field = document.getElementById(p);
+            field.value = val;
+         }
+      });
+   </script>
+
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hyperledger Fabric Licensee NFT Platform</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS Source: w3.CSS, free use / no license, https://www.w3schools.com/w3css -->
+        <link rel="stylesheet" href="/w3.css">
+        <style>
+            .main-container {
+              margin-bottom: 40px;
+            }
+            .main-headline {
+              margin-bottom: 20px;
+            }
+        </style>
+    </head>
+<body>
+
+    <div class="w3-container main-container">
+        <h2 id="page-title">Hyperledger Fabric Photographer NFT Platform</h2>
+    </div>
+
+    <div class="w3-container main-container">
+        <h3 id="section-title" class="main-headline">Copyright NFT</h3>
+        
+        <div class="w3-card-4 w3-round">
+            <div class="w3-container w3-teal w3-round">
+            <h3 id="box-title">View Token Balance</h3>
+            </div>
+
+            <form class="w3-container">
+            <p id="res">
+                
+            </p>
+            <!-- <button class="w3-btn w3-blue-grey w3-round" onclick="location.href='/photo'" type="button">Back</button> -->
+            <button class="w3-btn w3-blue-grey w3-round" onclick="window.history.back()" type="button">Back</button>
+            <p>
+            </form>
+            
+        </div>
+    </div>
+
+
+    <script>
+        let uri = document.baseURI;
+        let params = new URL(uri).searchParams;
+        params.forEach((val, p) => {
+           if (p == "res") {
+              let field = document.getElementById(p);
+              field.innerText = val;
+           }
+        });
+     </script>
+
+</body>
+</html>
+
