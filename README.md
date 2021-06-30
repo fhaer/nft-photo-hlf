@@ -11,7 +11,7 @@ Platform functions:
 
 Please note that this is a prototype for demonstration and evaluation purposes of the scenario and architecture.
 
-## Setup
+## Usage
 
 The prototype requires:
 
@@ -20,6 +20,7 @@ The prototype requires:
 - Node.js for hosting the frontend 
 - Node.js modules: express formidable
 
+Setup and usage:
 
-<img src="https://raw.githubusercontent.com/fhaer/photo-nft/main/setup-photo-nft.gif" width="45%" height="45%" />
+<img src="https://raw.githubusercontent.com/fhaer/nft-photo-hlf/main/photo-nft-demo.gif" width="75%" height="75%" />
 
